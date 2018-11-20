@@ -1,0 +1,32 @@
+.burger-button {
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.burger-button::before,
+.burger-button::after{
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.burger-button::before {
+  transform: rotate(45deg);
+}
+
+.burger-button::after {
+  transform: rotate(-45deg);
+}

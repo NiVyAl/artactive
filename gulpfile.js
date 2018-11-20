@@ -4,9 +4,11 @@ var postHtml = require("gulp-posthtml");
 var del = require("del");
 var server = require("browser-sync").create();
 var csso = require("gulp-csso");
+var plumber = require("gulp-plumber");
 
 gulp.task("css", function() {
   return gulp.src("source/less/style.less")
+    .pipe(plumber()) // чтоб при ошибке не вырубался
     .pipe(less())
     .pipe(csso())
     .pipe(gulp.dest("build"))
