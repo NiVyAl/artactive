@@ -5,6 +5,7 @@ var del = require("del");
 var server = require("browser-sync").create();
 var csso = require("gulp-csso");
 var plumber = require("gulp-plumber");
+var uglify = require("gulp-uglify"); // для js
 
 gulp.task("css", function() {
   return gulp.src("source/less/style.less")
@@ -19,6 +20,12 @@ gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(postHtml())
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("scripts", function() {
+  return gulp.src("source/scripts/**")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/scripts/"));
 });
 
 gulp.task("copy", function() {
@@ -50,7 +57,8 @@ gulp.task("server", function() {
   
   gulp.watch("source/less/*.less", gulp.series("css"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/scripts/**", gulp.series("scripts", "refresh"));
 });
 
-gulp.task("build", gulp.series("clean", "html", "css", "copy"));
+gulp.task("build", gulp.series("clean", "html", "css", "copy", "scripts"));
 gulp.task("start", gulp.series("build", "server"));

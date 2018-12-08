@@ -3,13 +3,18 @@
   border: none;
   background-color: transparent;
   width: 25px;
-  height: 25px;
+  height: 16px;
   position: absolute;
   cursor: pointer;
+  display: none;
 }
 
-.burger-button::before,
-.burger-button::after{
+.burger-button--close {
+  display: block;
+}
+
+.burger-button--close::before,
+.burger-button--close::after{
   content: "";
   display: block;
   width: 22px;
@@ -23,10 +28,38 @@
   margin: auto;
 }
 
-.burger-button::before {
+.burger-button--close::before {
   transform: rotate(45deg);
 }
 
-.burger-button::after {
+.burger-button--close::after {
   transform: rotate(-45deg);
 }
+
+.burger-button--open {
+  display: block;
+  box-shadow: inset 0 2px white;
+  //outline: 1px solid red;
+}
+
+.burger-button--open::before,
+.burger-button--open::after {
+  width: 25px;
+  height: 2px;
+  display: block;
+  content: '';
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+
+.burger-button--open::before {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.burger-button--open::after {
+  bottom: 0;
+}
+
