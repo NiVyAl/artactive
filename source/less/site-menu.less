@@ -1,30 +1,36 @@
 .site-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  //padding-top: 18px;
   font-family: "Open Sans";
   font-weight: bold;
+  margin: 10px 0; 
 }
 
 .site-menu__item {
-  color: white;
+  //color: white;
+  color: #333333;
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 13px;
+  margin: 8px 0;
 }
 
-.site-menu__item--phone {
-  //font-size: 16px;
-}
-
-.site-menu__burger {
-  right: 0;
-  top: 5px;
+.site-menu--open {
+  display: flex;
 }
 
 .site-menu__item--button {
-  height: auto;
-  text-transform: capitalize;
+  width: 150px;
+  height: 40px;
+  font-size: 11px;
+  color: @pink;
   background-color: transparent;
+  border: 2px solid @pink;
+}
+
+.site-menu__item--button:hover {
+  background-color: @pink;
+  color: white;
 }
