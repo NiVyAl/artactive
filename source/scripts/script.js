@@ -21,3 +21,13 @@ menuButton.addEventListener('click', function() {
     isMenuOpen = true;
   }
 })
+
+document.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27) {
+    menuButton.classList.add('burger-button--open');
+    menuButton.classList.remove('burger-button--close');
+    header.classList.remove('page-header--menu-open');
+    siteMenu.classList.remove('site-menu--open');
+    isMenuOpen = false;
+  }
+})

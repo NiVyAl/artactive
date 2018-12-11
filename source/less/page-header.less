@@ -1,6 +1,6 @@
 .page-header {
   .wrapper();
-  background-color: #8c3dd8;
+  //background-color: #8c3dd8;
   color: white;
   padding-top: 18px;
   position: absolute;
@@ -32,12 +32,33 @@
 }
 
 .page-header__burger {
+  position: absolute;
   right: 15px;
   top: 23px;
+  z-index: 2;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     padding-top: 22px;
+  }
+  
+  .page-header__burger {
+    top: 27px;
+    right: 30px;
+  }
+  
+  .page-header--menu-open {
+    height: 100%;
+  }
+  
+  .page-header--menu-open::before {
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+  }
+  
+  .page-header--menu-open .page-header__logo {
+    color: white;
   }
 }

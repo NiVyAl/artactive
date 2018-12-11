@@ -40,11 +40,14 @@
 
 @media (min-width: @tablet-width) {
   .first-slide {
-    padding-left: 438px;
+    //padding-left: 438px;
+    padding-left: 61%;
     background-image: url("../img/header-light-tablet.png"), url("../img/header-tablet.png");
-    background-position: left 15px;
-    padding-top: 50px;
-    padding-bottom: 75px;
+    background-position: left 40%;
+    background-size: 60%;
+    //background-size: 50%;
+    padding-top: 12%;
+    padding-bottom: 11%;
   }
   
   .first-slide__title {
@@ -59,5 +62,11 @@
   .first-slide__button {
     margin-top: 37px;
     width: 250px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .first-slide {
+    border: 1px solid red;
   }
 }
