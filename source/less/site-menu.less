@@ -17,16 +17,23 @@
   margin: 8px 0;
 }
 
+.site-menu__item--phone {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 .site-menu--open {
   display: flex;
 }
 
 .site-menu__item--button {
-  width: 150px;
-  height: 40px;
+  width: 165px;
+  height: 35px;
   font-size: 11px;
   color: @pink;
   background-color: transparent;
+  box-sizing: border-box;
   border: 2px solid @pink;
 }
 
@@ -53,5 +60,27 @@
   
   .site-menu__item {
     margin: 15px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-menu__item {
+    color: white;
+  }
+  
+  .site-menu__item--button {
+    border-color: white;
+    color: white;
+  }
+  
+  .site-menu__item--button:hover {
+    background-color: transparent;
   }
 }

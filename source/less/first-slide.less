@@ -67,6 +67,21 @@
 
 @media (min-width: @desktop-width) {
   .first-slide {
-    border: 1px solid red;
+    background-image: url("../img/header-light-tablet.png"), url("../img/header-desktop.png");
+    background-size: auto;
+    padding-left: 0;
+  }
+  
+  .first-slide__inner {
+    padding-left: 625px;
+    padding-right: 50px;
+  }
+  
+  .first-slide__title {
+    font-size: 60px;
+  }
+  
+  .first-slide__title-description {
+    font-size: 32px;
   }
 }
