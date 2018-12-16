@@ -70,7 +70,8 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    top: 10px;  
+    top: 12px;  
+    height: auto;
   }
   
   .page-header__burger {
@@ -83,7 +84,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    //border: 1px solid red;
   }
   
   .page-header__site-menu {
@@ -92,5 +92,9 @@
   
   .page-header__logo {
     padding-right: 135px;
+  }
+  
+  .page-header--menu-open::before {
+    display: none;
   }
 }

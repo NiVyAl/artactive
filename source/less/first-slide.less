@@ -67,21 +67,43 @@
 
 @media (min-width: @desktop-width) {
   .first-slide {
-    background-image: url("../img/header-light-tablet.png"), url("../img/header-desktop.png");
-    background-size: auto;
-    padding-left: 0;
+    background-image: none;
+    padding: 0;
   }
   
   .first-slide__inner {
-    padding-left: 625px;
+    padding-left: 640px;
     padding-right: 50px;
+    padding-top: 225px;
+    padding-bottom: 210px;
+    background-repeat: no-repeat;
+    background-image: url("../img/header-light-tablet.png"), url("../img/header-desktop.png");
+    background-size: auto;
+    background-position: 0 180px, -95px 180px;
   }
   
   .first-slide__title {
     font-size: 60px;
+    line-height: 75px;
   }
   
   .first-slide__title-description {
     font-size: 32px;
+  }
+  
+  .first-slide__button {
+    margin-top: 0; 
+  }
+  
+  .first-slide__button-description {
+    margin-top: 5px;
+  }
+  
+  .first-slide__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 75px;
+    justify-content: space-between;
   }
 }
