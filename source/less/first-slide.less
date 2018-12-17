@@ -67,7 +67,9 @@
 
 @media (min-width: @desktop-width) {
   .first-slide {
-    background-image: none;
+    background-image: url("../img/first-slide-background.jpg");
+    background-size: cover;
+    background-position: center;
     padding: 0;
   }
   
@@ -79,7 +81,8 @@
     background-repeat: no-repeat;
     background-image: url("../img/header-light-tablet.png"), url("../img/header-desktop.png");
     background-size: auto;
-    background-position: 0 180px, -95px 180px;
+    background-position: 0 180px, 0px 180px;
+    //-95
   }
   
   .first-slide__title {
