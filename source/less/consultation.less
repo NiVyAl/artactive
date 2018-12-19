@@ -4,6 +4,10 @@
   padding-top: 5%;
   padding-bottom: 10%;
   border-radius: 15px;
+  box-shadow: 0 11px 33px #510856;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .consultation__text {
@@ -12,10 +16,41 @@
   line-height: 24px;
   font-family: "Open Sans", "Arial";
   font-style: italic;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .consultation__text--title {
   font-style: normal;
   font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+//117
+@media (min-width: @tablet-width) {
+  .consultation {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    height: 117px;
+  }
+  
+  .consultation__button {
+    width: 250px;
+  }
+  
+  .consultation__text {
+    margin: 0;
+  }
+  
+  .consultation__text--title {
+    margin-left: -10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .consultation {
+    width: 470px;
+  }
 }
