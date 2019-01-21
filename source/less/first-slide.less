@@ -54,13 +54,17 @@
 @media (min-width: @tablet-width) {
   .first-slide {
     //padding-left: 438px;
-    padding-left: 61%;
     background-image: url("../img/header-light-tablet.png"), url("../img/header-tablet.png");
     background-position: left 40%;
-    background-size: 60%;
+    background-size: 50%;
     //background-size: 50%;
+    padding: 0;
+  }
+  
+  .first-slide__inner {
     padding-top: 12%;
     padding-bottom: 11%;
+    padding-left: 55%;
   }
   
   .first-slide__title {
@@ -78,6 +82,20 @@
   }
 }
 
+@media (min-width: 900px) {
+  .first-slide {
+    background-image: none;
+  }
+  
+  .first-slide__inner {
+    background-image: url("../img/header-light-tablet.png"), url("../img/header-tablet.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 500px;
+  }
+  
+}
+
 @media (min-width: @desktop-width) {
   .first-slide {
     background-image: url("../img/first-slide-background.jpg");
@@ -91,7 +109,6 @@
     padding-right: 50px;
     padding-top: 225px;
     padding-bottom: 210px;
-    background-repeat: no-repeat;
     background-image: url("../img/header-light-tablet.png"), url("../img/header-desktop.png");
     background-size: auto;
     background-position: 0 180px, 0px 180px;

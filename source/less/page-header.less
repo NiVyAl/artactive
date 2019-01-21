@@ -13,11 +13,12 @@
 .page-header__inner {
   display: grid;
   align-items: center;
-  grid-template-columns: auto 25px;
+  grid-template-columns: auto auto;
 }
 
 .page-header__logo {
   position: relative;
+  //justify-self: center;
 }
 
 .page-header__burger {
@@ -26,6 +27,7 @@
   //bottom: 0;
   //margin: auto;
   //right: 0;
+  justify-self: end;
   grid-column-start: 2;
   grid-row-start: 1;
   z-index: 2;
@@ -60,8 +62,8 @@
   }
   
   .page-header__burger {
-    top: 27px;
-    right: 30px;
+    //top: 27px;
+    //right: 30px;
   }
   
   .page-header--menu-open {

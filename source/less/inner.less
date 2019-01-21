@@ -1,5 +1,6 @@
 .inner {
-  position: relative;
+  //position: relative;
+  box-sizing: border-box;
 }
 
 @media (min-width: 530px) {
@@ -11,7 +12,16 @@
 
 @media (min-width: @tablet-width) {
   .inner {
-    
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 900px) {
+  .inner {
+    width: 810px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 
